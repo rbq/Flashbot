@@ -1,0 +1,6 @@
+--- 
+oauth: 
+  request_token: 
+  consumer_key: 
+  consumer_secret: 
+  request_secret:
