@@ -31,6 +31,10 @@ $search['suche']['since_id'] = $since_id
 File.open(SEARCH_FILE, 'w') { |f| YAML.dump($search, f) }
 
 suchergebnisse.each do |ergebnis|
+  begin
     client.update("@#{ergebnis.from_user} FLASH! Aaaah - Savior of the Universe", {:in_reply_to_status_id => ergebnis.id})
+  rescue
+    puts "Da hat was nicht geklappt. Wayne. So sieht die Fehlermeldung nur besser aus."
+  end
 end
 
