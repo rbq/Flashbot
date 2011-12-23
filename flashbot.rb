@@ -22,7 +22,7 @@ end
 
 client = Twitter::Client.new
 
-# Hole die letzten paar Tweets, die mit Hashtag "#piraten" geschrieben haben.
+# Hole die letzten paar Tweets, die "flash" enthalten.
 suchergebnisse = client.search('flash', {:since_id => $since_id})
 
 # Neuen Such-Startpunkt auslesen und in die Config schreiben
